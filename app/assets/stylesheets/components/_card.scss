@@ -1,0 +1,15 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  // width: 80%;
+  // margin: 0 auto;
+}
+
+.card {
+  font-family: $my-font;
+  height: 200px;
+  width: 350px;
+}
+
+

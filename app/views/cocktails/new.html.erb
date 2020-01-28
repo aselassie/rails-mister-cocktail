@@ -1,0 +1,12 @@
+<div class="jumbotron">
+  <div class="container">
+    <div class="justify-content-center">
+      <h1>Add New Cocktail</h1>
+      <%= simple_form_for(@cocktail) do |f| %>
+        <%= f.input :name %>
+        <%= f.submit "Submit", class: "btn btn-outline-dark" %> <%= link_to "Back to cocktails", cocktails_path, class: "btn btn-outline-dark" %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
