@@ -4,6 +4,7 @@
       <h1>Add New Cocktail</h1>
       <%= simple_form_for(@cocktail) do |f| %>
         <%= f.input :name %>
+        <%= f.input :photos, as: :file, input_html: { multiple: true } %>
         <%= f.submit "Submit", class: "btn btn-outline-dark" %> <%= link_to "Back to cocktails", cocktails_path, class: "btn btn-outline-dark" %>
       <% end %>
     </div>

@@ -6,6 +6,9 @@
       method: :delete, data: { confirm: 'Are you sure?' } do %>
         <i class="fa fa-trash-alt destroy_dose"></i>
         <% end %>
+        <% @cocktail.photos.each do |photo| %>
+          <%= cl_image_tag photos.key, height: 300, width: 300, crop: :fill %>
+        <% end %>
       </p>
     <% end %>
     <%= link_to 'New Dose', new_cocktail_dose_path(@cocktail), class: "btn btn-outline-dark" %>
