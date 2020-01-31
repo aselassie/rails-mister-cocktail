@@ -1,14 +1,13 @@
-<!-- <nav>Bar name</nav> -->
+
 
 <nav class="navbar sticky-top">
-  <%= link_to "Create new", new_cocktail_path, class: "btn btn-outline-light"%>
- <!--  <a class="navbar-brand">Lazy Keg Bar</a> -->
+  <i class="fas fa-cocktail"></i>
+  <%= link_to "Create your cocktail", new_cocktail_path, class: "btn btn-outline-light"%>
 </nav>
 
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1568882370097-90df69e381b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1791&q=80);">
   <div class="container">
     <h1>Lazy Keg Bar</h1>
-
   </div>
 </div>
 
@@ -16,17 +15,13 @@
 <div class="row">
   <% @cocktails.each do |cocktail| %>
     <div class="col-12 col-md-6 col-lg-4">
-      <div class="card" style="background-image: url('https://source.unsplash.com/500x400/?cocktail+<%= cocktail.name %>') ">
-        <div class="card-body">
-          <%= link_to cocktail_path(cocktail), class: "btn btn-info" do %>
+      <div class="card" >
+        <div class="card-body" style="background-image: url('<%= cl_image_path cocktail.photo.key, height: 300, width: 400, crop: :fill %>')">
+          <%= link_to cocktail_path(cocktail), class: "btn btn-light" do %>
             <%= cocktail.name.capitalize %>
           <% end %>
         </div>
       </div>
     </div>
   <% end %>
-
-
-
-
 </div>

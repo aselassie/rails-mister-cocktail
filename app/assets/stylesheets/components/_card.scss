@@ -1,15 +1,69 @@
-
+// index page
 .card {
   height: 200px;
   padding: 0;
   margin: 10px 0;
   transition: transform .1s;
 }
-
 .card:hover {
   transform: scale(1.05);
 }
 
 .card .btn{
   font-family: courier;
+  font-weight: bold;
+}
+
+.card-drink {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  background: black;
+  color: white;
+  margin: 100px 50px;
+  font-family: courier;
+  padding-top: 2em;
+
+  h3 {
+    font-family: courier;
+    font-weight: bold;
+    margin-top: 0;
+  }
+
+}
+
+// show page
+
+.card-drink-info {
+  padding: 2em;
+  text-align: center;
+  .btn {
+    margin-bottom: 1em;
+    font-weight: bold;
+  }
+}
+
+.fa-trash-alt {
+  color: black;
+  margin-left: 0,5em;
+}
+
+
+// form page
+.container-dose {
+  margin: 200px auto;
+  color: white;
+  font-family: courier;
+
+  h2 {
+    font-family: courier;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+
+  .input {
+    width: 100px;
+  }
 }
